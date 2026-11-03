@@ -1,0 +1,12 @@
+class Solution {
+    public int smallestEvenMultiple(int n) {
+//         check if the number is divisible by 2. if yes? return the number.
+//         otherwise! multiply it with 2. and we get the smallest even multiple.
+        if(n%2==0){
+            return n;
+        }
+        else{
+            return n*2;
+        }
+    }
+}
