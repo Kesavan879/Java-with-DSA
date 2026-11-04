@@ -1,0 +1,13 @@
+class Solution {
+    public int numberOfMatches(int n) {
+        int sum=0;
+        int orginial=n;
+        while(n>1){
+           n=n/2;
+           sum+=n;
+           n=orginial-n;
+           orginial=n;
+        }
+        return sum;
+    }
+}
