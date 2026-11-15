@@ -1,0 +1,26 @@
+class Solution {
+    public int maximumProduct(int[] nums) {
+        bubble(nums);
+        int a = nums[0] * nums[1] * nums[nums.length - 1];
+        int b = nums[nums.length - 1] * nums[nums.length - 2] * nums[nums.length - 3];
+
+    return Math.max(a, b);
+    }
+    static void bubble(int[] nums){
+        boolean ans;
+        for(int i=0;i<nums.length;i++){
+            ans=false;
+            for(int j=1;j<nums.length-i;j++){
+                if(nums[j]<nums[j-1]){
+                    int temp=nums[j];
+                    nums[j]=nums[j-1];
+                    nums[j-1]=temp;
+                    ans=true;
+                }
+            }
+            if(ans==false){
+                break;
+            }
+        }
+    }
+}
